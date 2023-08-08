@@ -18,7 +18,7 @@ RUN pip install "poetry==$POETRY_VERSION" \
 
 
 ### Final stage
-FROM python:3.8-slim as final
+FROM quay.io/python:3.8-slim as final
 
 WORKDIR /app
 
