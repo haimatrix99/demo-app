@@ -1,4 +1,4 @@
-FROM python:3.8-slim as build
+FROM quay.io/python:3.8-slim as build
 
 ENV PIP_DEFAULT_TIMEOUT=100 \
     # Allow statements and log messages to immediately appear
