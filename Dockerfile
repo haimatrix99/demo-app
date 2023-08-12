@@ -1,4 +1,4 @@
-FROM quay.io/fedora/python-310 as build
+FROM python:3.8-slim as build
 
 ENV PIP_DEFAULT_TIMEOUT=100 \
     # Allow statements and log messages to immediately appear
@@ -18,7 +18,7 @@ RUN pip install "poetry==$POETRY_VERSION" \
 
 
 ### Final stage
-FROM quay.io/fedora/python-310 as final
+FROM python:3.8-slim as final
 
 WORKDIR /app
 
